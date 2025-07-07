@@ -38,7 +38,7 @@ export async function mintCertificate(
     },
   });
 
-  const changeAddress = await wallet.getChangeAddress(); // ✅ Safe now
+  const changeAddress = await wallet.getChangeAddress();
   tx.setRequiredSigners([changeAddress]);
   console.log("Building datum and transaction...");
 

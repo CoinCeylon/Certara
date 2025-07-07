@@ -1,3 +1,7 @@
+import LandingPage from "@/components/landing-section";
+
 export default function Home() {
-  return ""
+  return (
+    <LandingPage />
+  )
 }
