@@ -2,6 +2,8 @@
 
 <br>
 
+<img src="project/public/image.png">
+
 ## Getting Started
 
 The essential procedures required for initiating and configuring the project within your local environment.
