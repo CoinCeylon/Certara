@@ -1,4 +1,3 @@
-// /lib/mintCertificate.ts
 import {
   Transaction,
   Data,

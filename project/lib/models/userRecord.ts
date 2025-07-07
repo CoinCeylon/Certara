@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 
 const { Schema, model, models } = mongoose;
 
-// Candidate schema (nested inside courses)
 const CandidateSchema = new Schema({
   candidateName: {
     type: String,
@@ -20,7 +19,6 @@ const CandidateSchema = new Schema({
     required: true,}
 });
 
-// Course schema (nested inside user)
 const CourseSchema = new Schema({
   courseId: {
     type: String,
@@ -32,7 +30,6 @@ const CourseSchema = new Schema({
   candidates: [CandidateSchema],
 });
 
-// User schema
 const UserCourseRecordSchema = new Schema(
   {
     userId: {

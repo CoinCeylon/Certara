@@ -24,13 +24,11 @@ export default function OrganizationsPage() {
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState("")
 
-  // Mouse tracking states
   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
   const [searchMousePosition, setSearchMousePosition] = useState<MousePosition>({ x: 0, y: 0 })
   const [isSearchHovering, setIsSearchHovering] = useState(false)
 
-  // Refs for mouse tracking
   const containerRef = useRef<HTMLDivElement>(null)
   const searchRef = useRef<HTMLInputElement>(null)
 
@@ -202,7 +200,6 @@ useEffect(() => {
               <p className="text-white/70 text-xl">Registered organizations and their blockchain wallet addresses</p>
             </header>
 
-            {/* Main Content */}
             <main
               ref={containerRef}
               className="relative rounded-xl p-8 overflow-visible border border-white/20 smooth-transition backdrop-blur-sm animate-fade-in hover-lift"

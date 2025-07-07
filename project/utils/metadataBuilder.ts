@@ -1,4 +1,3 @@
-// /utils/metadataBuilder.ts
 export function buildCertificateMetadata(
   studentName: string,
   nic: string,

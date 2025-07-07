@@ -1,6 +1,5 @@
 import mongoose, { Document, Model, Schema } from 'mongoose';
 
-
 export interface IUser extends Document {
   id: string;
   orgName: string;
