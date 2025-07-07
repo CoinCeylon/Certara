@@ -1,34 +1,50 @@
-import type { Metadata } from "next";
+import type React from "react"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css";
-import { ThemeProvider } from "../components/theme-provider"
+import "./globals.css"
+import { Toaster } from "sonner"
+import { ThemeProvider } from "@/components/theme-provider";
+import MeshProviderWrapper from '@/components/MeshProviderWrapper';
+
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Certara",
-  description: "Revolutionize Your Certificates With Blockchain-Backed Authenticity"
-};
+  title: "Certara Login",
+  description: "Login to your Certara account",
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={inter.className}
-      >
-          <ThemeProvider
+    <html suppressHydrationWarning lang="en">
+      <body className={inter.className}>
+        <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
+          <MeshProviderWrapper>
             {children}
-          </ThemeProvider>
+          </MeshProviderWrapper>
+        </ThemeProvider>
+        <Toaster
+          theme="dark"
+          position="top-right"
+          toastOptions={{
+            style: {
+              background: "rgba(0, 0, 0, 0.8)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              color: "white",
+              backdropFilter: "blur(12px)",
+            },
+          }}
+        />
       </body>
     </html>
-  );
+  )
 }

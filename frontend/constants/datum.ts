@@ -1,3 +1,4 @@
+// /constants/datum.ts
 import { Data, resolvePaymentKeyHash } from '@meshsdk/core';
 
 export async function buildCertificateDatum(

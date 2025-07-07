@@ -1,0 +1,1 @@
+# Certara: Revolutionize Your Certificates With Blockchain-Based Authenticity

@@ -4,7 +4,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 const connect =  async() => {
   if (mongoose.connection.readyState === 1) {
-    console.log("Already Connected To The Database");
+    console.log("Already Connected to DB");
     return;
   }
   
@@ -18,7 +18,7 @@ const connect =  async() => {
         dbName: 'pacy',
         bufferCommands: true
     });
-    console.log("Connected To The Database")
+    console.log("Connected to DB")
   } catch (err:unknown) {
     console.log("Error: " , err);
   

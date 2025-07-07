@@ -1,10 +1,11 @@
+// /lib/mintCertificate.ts
 import {
   Transaction,
   Data,
   AssetMetadata,
 } from '@meshsdk/core';
-import { scriptAddress } from '../constants/script';
-import { buildCertificateDatum } from '../constants/datum';
+import { scriptAddress } from '@/constants/script';
+import { buildCertificateDatum } from '@/constants/datum';
 
 export async function mintCertificate(
   wallet: any,
@@ -38,7 +39,7 @@ export async function mintCertificate(
     },
   });
 
-  const changeAddress = await wallet.getChangeAddress();
+  const changeAddress = await wallet.getChangeAddress(); // ✅ Safe now
   tx.setRequiredSigners([changeAddress]);
   console.log("Building datum and transaction...");
 

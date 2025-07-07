@@ -1,5 +1,6 @@
 import mongoose, { Document, Model, Schema } from 'mongoose';
 
+
 export interface IUser extends Document {
   id: string;
   orgName: string;
@@ -27,6 +28,7 @@ const userSchema = new Schema<IUser>({
   resetPasswordOTP: { type: String },
   resetPasswordOTPExpires: { type: Date },
 });
+
 
 const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>('User', userSchema);
 
